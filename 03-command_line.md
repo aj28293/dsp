@@ -30,7 +30,7 @@ ls -a listing hidden files
 cp - copying a file from one directory to another  
 clear - clear screen   
 mv - Move a file to another directory  
----
+
 
 ### Q2.  List Files in Unix   
 
