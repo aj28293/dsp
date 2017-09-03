@@ -81,14 +81,31 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I have historically used nano as the default and likely the best going 
 
---
+
 
 ### Q3. Graphical Editor
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I have typically used Sublime, Atom, and Spyder.  In some simple cases I use Notebook++.  Going forward I am likely to use Sublime or Atom with following considerations:    
+*Cost   
+*Ability to make multiple changes at once   
+*Customization   
+*Built-in Console   
+   
+ Short-Cuts in Sublime:
+ *Block Comment - CTRL + SHIFT + /   
+ *Comment Line - CTRL + /    
+ *Increase font size - CTRL + PLUS    
+ *Duplicate Line - CTRL + SHIFT + D   
+ 
+ Customization of Sublime:   
+ *Set personal settings in Packages/User directory   
+ *Changes are made in #.sublime-settings files   
+ *Settings changed in Preferences.sublime-settings, Python.sublime-settings files    
+ *Changes can include color schemes, indentation, file formats, etc.  
+
 
  
