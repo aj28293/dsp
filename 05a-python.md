@@ -12,33 +12,67 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Lists and Tuples are the same except that tuples are immutable.  Lists are a series of objects that can be used for keys in a dictionary.  Given a dictionary is mutable, the keys should be mutable which would require a list not a tuple.  
 
----
+
 
 ### Q2. Lists &amp; Sets
 
-How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
+How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why? 
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Sets are lists with only unique values (no duplicates) and unordered.  Sets are faster for look up as the search uses hash lookup.    
 
----
+listA = [1,1,2,2,3,3,4,5]    
+setA = set(listA)    
+setB = {1,1,2,2,3,3,4,5}    
+
+print(setA)    
+{1, 2, 3, 4, 5}    
+   
+print(setB)    
+{1, 2, 3, 4, 5}    
 
 ### Q3. Lambda Function
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Python lambda is used for inline or anonymous function to be applied rather than creating a whole new function and calling the function.  Usually good when the function will not be reused, ie. one-time use.    
 
----
+Example:   
+
+cars = [   
+    {"type": "Porsche", "doors": 2, "color": "black"},    
+    {"type": "BMW", "doors": 4, "color": "blue"},
+    {"type": "Ferrari", "doors": 2, "color": "red"}]
+    
+sorted(cars, key=lambda car: car['doors'])
+
+
 
 ### Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List Comprehension is a way of transforming one list into another using some filter or map mechanism in one line.     
 
----
+Examples:   
+listA = range(1,11)
+listOdds = return_odd = [n for n in listA if n % 2 == 1]
+
+import numpy as np
+listA = np.arange(1.0,11.0)
+cube = lambda x: x ** 3
+listACubed = list(map(cube, listA))
+
+def sqr(x):
+   return x ** 2
+   
+items_squared = map( sqr, items_list)
+
+xlist = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75,100]
+tens_list = list(filter(lambda x: x % 10 == 0, xlist))
+
+
 
 ### Complete the following problems by editing the files below:
 
@@ -51,14 +85,25 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+def difference_in_days(date_start, date_stop):    
+    date_format = "%m-%d-%Y"    
+    date1 = datetime.strptime(date_start, date_format)    
+    date2 = datetime.strptime(date_stop, date_format)    
+    days = date2 - date1    
+    return days.days    
 
 b.  
 ```
 date_start = '12312013'  
 date_stop = '05282015'  
 ```
-
+def difference_in_days(date_start, date_stop):    
+    date_format = "%m%d%Y"    
+    date1 = datetime.strptime(date_start, date_format)    
+    date2 = datetime.strptime(date_stop, date_format)   
+    days = date2 - date1    
+    return days.days  
+    
 >> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
 
 c.  
@@ -67,7 +112,12 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+def difference_in_days(date_start, date_stop):    
+    date_format = "%d-%b-%Y"    
+    date1 = datetime.strptime(date_start, date_format)    
+    date2 = datetime.strptime(date_stop, date_format)   
+    days = date2 - date1    
+    return days.days 
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
