@@ -19,8 +19,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
 
+pwd - show current working directory path
+mkdir - creating a directory
+rd or rmdir- deleting a directoryls 
+touch "filename.ext" - creating a file using `touch` command
+rm - deleting a file
+ren or rename - renaming a file
+ls -a listing hidden files
+cp - copying a file from one directory to another
+clear - clear screen 
+mv - Move a file to another directory
 ---
 
 ### Q2.  List Files in Unix   
@@ -34,7 +43,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls`  - list directory contents
+`ls -a`  - show all contents including hidden files
+`ls -l`  - show files in long format
+`ls -lh`  - show files in long format with file sizes 
+`ls -lah`  - show files in long format with file sizes including those starting with a period
+`ls -t`  - list files ordered by date and time
+`ls -Glp` - Displays directories with / in long format
 
 ---
 
@@ -42,7 +57,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+ls -R - Displays subdirectories as well
+ls -u - Displays files by the file access time
+ls -x - Displays files as rows across the screen
+ls -m - Displays the names as a comma-separated list. 
+ls -d - Displays only directories
 
 ---
 
@@ -50,7 +69,4 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
- 
-
+xargs - used to build and execute command lines from standard input
