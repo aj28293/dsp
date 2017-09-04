@@ -104,7 +104,6 @@ def difference_in_days(date_start, date_stop):
     days = date2 - date1    
     return days.days  
     
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
 
 c.  
 ```
