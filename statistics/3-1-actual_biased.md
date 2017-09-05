@@ -8,16 +8,16 @@ Plot the actual and biased distributions, and compute their means.
 
 resp = nsfg.ReadFemResp()   
 
-# Solution goes here     
+    
 pmf = thinkstats2.Pmf(resp.numkdhh, label='actual')    
 
-# Solution goes here    
+  
 biased_pmf = BiasPmf(pmf, label='biased')   
 thinkplot.PrePlot(2)   
 thinkplot.Pmfs([pmf, biased_pmf])   
 thinkplot.Config(xlabel='Number of children', ylabel='PMF')   
 .
-# Solution goes here    
+  
 print(pmf.Mean(), biased_pmf.Mean())     
 
 1.02420515504 2.40367910066    
