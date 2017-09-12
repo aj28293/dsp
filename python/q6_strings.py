@@ -18,7 +18,15 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+	
+    if count > 9:
+        donuts = "Number of donuts: many"
+        return donuts
+    else:
+        donuts = "Number of donuts: " + count
+        return donuts
+		
+    #raise NotImplementedError
 
 
 def both_ends(s):
@@ -37,7 +45,16 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ""
+    else:
+        return s[0:2] + s[-2:]
+
+#def both_ends(s):
+ #   return s[0:2] + s[-2:]
+	
+	
+	#raise NotImplementedError
 
 
 def fix_start(s):
@@ -56,7 +73,18 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+
+    l = int(len(s))
+    ns = list(s)
+    fl = ns[0]
+    for i in range(1, l):
+        if ns[i] == fl:
+            ns[i] = "*"
+        
+    return ''.join(ns)
+
+	
+	#raise NotImplementedError
 
 
 def mix_up(a, b):
@@ -74,7 +102,23 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    na = list(a)
+    nb = list(b)
+    
+    fla = na[0]
+    flb = nb[0]
+    sla = na[1]
+    slb = nb[1]
+    
+    na[0] = flb
+    nb[0] = fla
+    na[1] = slb
+    nb[1] = sla  
+    
+    return (''.join(na) + ' ' + ''.join(nb))
+
+	
+	#raise NotImplementedError
 
 
 def verbing(s):
@@ -91,7 +135,17 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    l = len(s)
+    if l > 2:
+        if s[-3:] == "ing":
+            return s + "ly"
+        else:
+            return s + "ing"
+    else:
+        return s
+	
+	
+	#raise NotImplementedError
 
 
 def not_bad(s):
@@ -111,7 +165,18 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    rs = s
+    ns = rs.find('not')
+    bs = rs.find('bad')
+    
+    if ns < bs:
+       rs = rs.replace(rs[ns:bs+3],'good')
+    
+    return rs
+	
+	
+	
+	#raise NotImplementedError
 
 
 def front_back(a, b):
@@ -130,4 +195,20 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    
+    s1half = math.ceil(len(s1)/2)
+    s2half = math.ceil(len(s2)/2)
+    ls1 = list(s1)
+    ls2 = list(s2)
+    
+    s1front = ls1[0:s1half]
+    s1back = ls1[s1half:]
+    s2front = ls2[0:s2half]
+    s2back = ls2[s2half:]
+       
+
+    
+    return (''.join(s1front) + ''.join(s2front) + ''.join(s1back) + ''.join(s2back))
+	
+	
+	#raise NotImplementedError
